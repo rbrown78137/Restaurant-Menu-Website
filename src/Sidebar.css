@@ -1,7 +1,33 @@
 .sidebar {
+  padding-top: 1vw;
+  padding-left: 1vw;
   margin: 0;
   left: 0;
   width: 30vw;
-  height: 100vw;
-  background-color: whitesmoke;
+  bottom: 0;
+  background-color: #f8f8ff;
+  border-right-width: 2px;
+  border-right-color: black;
+  border-right: solid;
+}
+
+.sidebar-notexpanded {
+  padding-top: 1vw;
+  padding-left: 1vw;
+  padding-right: 0.5vw;
+
+  margin: 0;
+  background-color: #f8f8ff;
+  border-right-width: 2px;
+  border-right-color: black;
+  border-right: solid;
+}
+
+.menuIcon {
+  display: block;
+}
+
+.submitButton {
+  margin-top: 2vw;
+  text-align: center;
 }

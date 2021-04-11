@@ -1,4 +1,5 @@
 import React from "react";
+import "./item.css";
 
 class Item extends React.Component {
   constructor(props) {
@@ -6,7 +7,6 @@ class Item extends React.Component {
     this.state = {
       name: props.name,
       description: props.description,
-      menuId: props.menuId,
       cost: props.decimal,
       calories: props.calories,
     };
@@ -14,19 +14,11 @@ class Item extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>
-          Name: {this.props.name}
-          <br />
-        </h1>
-        <h2>
-          Description: {this.props.description}
-          <br />
-          Cost: {this.props.cost}
-          <br />
-          Calories: {this.props.calories}
-          <br />
-        </h2>
+      <div className="itemContainer">
+          {this.props.name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calories - {this.props.calories}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.props.cost}.00
+        <div className="itemDesc">
+          {this.props.description}
+        </div>
       </div>
     );
   }
