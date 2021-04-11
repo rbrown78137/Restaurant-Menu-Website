@@ -1,4 +1,5 @@
 import React from "react";
+import "./menu.css"
 
 class Restaurant extends React.Component {
   constructor(props) {
@@ -12,10 +13,9 @@ class Restaurant extends React.Component {
   render() {
     return (
       <div>
-        <h1>
-          Name: {this.props.mealTime}
-          <br />
-        </h1>
+        <div className="menuContainer">
+          {this.props.mealTime.charAt(0).toUpperCase() + this.props.mealTime.slice(1).toLowerCase()} Menu:
+        </div>
       </div>
     );
   }

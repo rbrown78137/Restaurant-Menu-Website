@@ -1,0 +1,14 @@
+.restContainer{
+    background-color: #f8f8ff;
+    width: auto;
+    margin: 0;
+    margin-bottom:0;
+    padding: 1vw;
+    display: flex;
+}
+
+.logoImg{
+    width: 250px;
+    height: 200px;
+    margin-right:2vw;
+}
