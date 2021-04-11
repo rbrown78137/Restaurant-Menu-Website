@@ -55,6 +55,16 @@ class App extends React.Component {
   foodCategoryHandleChange = (event) => {
     this.setState({ foodCategory: event.target.value });
   };
+
+  removeAllChildNodes = (parent) => {
+    try{
+      while (parent.firstChild) {
+          parent.removeChild(parent.firstChild);
+      }
+    }catch(err){
+
+    }
+  }
   /*
    */
   getFilter = () => {
@@ -112,6 +122,7 @@ class App extends React.Component {
   }
   addElements = () => {
     console.log("trying to test");
+    this.removeAllChildNodes(document.getElementById("restaurantList"));
     ///api/restaurants/?name=McDonalds&mealTime=LUNCH&dietaryRestrictionIds=1&dietaryRestrictionIds=2&dietaryRestrictionIds=3
     var xhr = new XMLHttpRequest();
     xhr.open("GET", this.getFilter(), true);
@@ -199,6 +210,7 @@ class App extends React.Component {
   };
 
   render() {
+    //this.addElements();
     return (
       <div className="App">
         <header className="App-header">
